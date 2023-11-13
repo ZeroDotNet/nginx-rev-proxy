@@ -6,7 +6,7 @@ services:
     container_name: nginx-rev-proxy
     networks:
       - bridge
-    ports:
+    ports: 
       - '80:80'
       - '81:81'
       - '443:443'
