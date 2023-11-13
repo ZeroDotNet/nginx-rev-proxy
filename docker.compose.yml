@@ -4,6 +4,10 @@ services:
     image: 'jc21/nginx-proxy-manager:latest'
     restart: unless-stopped
     container_name: nginx-rev-proxy
+    pull_policy: build
+    environment:
+      - PUID=1000
+      - PGID=1000
     networks:
       - bridge
     ports: 
